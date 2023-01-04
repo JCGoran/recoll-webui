@@ -10,6 +10,7 @@ import csv
 import io
 import string
 import shlex
+from pathlib import Path
 from urllib.parse import quote as urlquote
 from recoll import recoll, rclextract, rclconfig
 
@@ -25,6 +26,8 @@ except ImportError:
 
 
 g_fscharset=sys.getfilesystemencoding()
+
+bottle.TEMPLATE_PATH.insert(0, str(Path(__file__).resolve().parent.parent / 'views'))
 
 #}}}
 #{{{ settings
@@ -372,7 +375,7 @@ def recoll_search(q):
 #{{{ static
 @bottle.route('/static/:path#.+#')
 def server_static(path):
-    return bottle.static_file(path, root='./static')
+    return bottle.static_file(path, root=Path(__file__).resolve().parent.parent / 'static')
 #}}}
 #{{{ main
 @bottle.route('/')
