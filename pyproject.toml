@@ -5,6 +5,7 @@ description = "Web interface for recoll desktop search"
 authors = ["Jean-Francois Dockes <jf@dockes.org>", "koniu <koniu@riseup.net>"]
 readme = "README.rst"
 repository = "https://framagit.org/medoc92/recollwebui"
+include = ["static", "views"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
