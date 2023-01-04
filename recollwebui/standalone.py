@@ -13,10 +13,6 @@ args = parser.parse_args()
 if args.config:
     os.environ["RECOLL_CONFDIR"] = args.config
 
-# change to webui's directory and import
-if os.path.dirname(__file__) != "":
-    os.chdir(os.path.dirname(__file__))
-
 # set up webui and run in own http server
 webui.bottle.debug(True)
 webui.bottle.run(server='waitress', host=args.addr, port=args.port)
