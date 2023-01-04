@@ -27,7 +27,7 @@ except ImportError:
 
 g_fscharset=sys.getfilesystemencoding()
 
-bottle.TEMPLATE_PATH.insert(0, str(Path(__file__).resolve().parent.parent / 'views'))
+bottle.TEMPLATE_PATH.insert(0, str(Path(__file__).resolve().parent / 'views'))
 
 #}}}
 #{{{ settings
@@ -375,7 +375,7 @@ def recoll_search(q):
 #{{{ static
 @bottle.route('/static/:path#.+#')
 def server_static(path):
-    return bottle.static_file(path, root=Path(__file__).resolve().parent.parent / 'static')
+    return bottle.static_file(path, root=Path(__file__).resolve().parent / 'static')
 #}}}
 #{{{ main
 @bottle.route('/')
