@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "recollwebui"
-version = "0.1.0"
+version = "0.1.1"
 description = "Web interface for recoll desktop search"
 authors = ["Jean-Francois Dockes <jf@dockes.org>", "koniu <koniu@riseup.net>"]
 readme = "README.rst"
