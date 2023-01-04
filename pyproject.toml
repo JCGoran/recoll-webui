@@ -10,6 +10,9 @@ repository = "https://framagit.org/medoc92/recollwebui"
 python = "^3.7"
 waitress = "^2.1.2"
 
+[tool.poetry.scripts]
+recollwebui = "recollwebui.standalone:main"
+
 [tool.poetry.group.dev.dependencies]
 pylint = "^2.10"
 mypy = "^0.991"
