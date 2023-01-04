@@ -1,6 +1,6 @@
 #{{{ imports
 import os
-import bottle
+from recollwebui import bottle
 import time
 import sys
 import datetime

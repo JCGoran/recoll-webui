@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import argparse
-import webui
+from recollwebui import webui
 
 # handle command-line arguments
 parser = argparse.ArgumentParser()
